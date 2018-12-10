@@ -1,13 +1,11 @@
-class monit::config inherits monit::minimal::config {
-  contain monit::install
+class monit::config (
 
-  file { "/etc/monit/monitrc":
-    owner   => root,
-    group   => root,
-    mode    => 400,
-    notify  => Service["monit"],
+) inherits monit::minimal::config {
+
+  include monit::install
+
+  File["/etc/monit/monitrc"] {
     source  => "puppet:///modules/monit/monitrc",
-    require => [Package["monit"], File["/etc/monit/monitrc.d"]],
   }
 
 }

@@ -1,4 +1,6 @@
-class monit::service inherits monit::minimal::service {
+class monit::service (
+
+) inherits monit::minimal::service {
   
   contain monit::config
   
