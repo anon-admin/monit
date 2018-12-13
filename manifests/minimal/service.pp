@@ -5,7 +5,7 @@ class monit::minimal::service (
   file { "/etc/default/monit":
     owner => root,
     group => root,
-    mode => 444,
+    mode => '444',
     notify => Service["monit"],
   }
 
