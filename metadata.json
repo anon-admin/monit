@@ -3,12 +3,20 @@
   "dependencies": [{
   	"name": "Dimitri-conf", "version_requirement": ">= 0.1.0"
   }],
-  "license": "",
+  "license": "GNU GENERAL PUBLIC LICENSE Version 3",
   "name": "Dimitri-monit",
-  "operatingsystem_support": [],
-  "project_page": "",
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "18.04",
+        "16.04"
+      ]
+    }
+  ],
+  "project_page": "https://github.com/anon-admin/monit",
   "requirements": [],
-  "source": "",
+  "source": "https://github.com/anon-admin/monit",
   "summary": "",
   "tags": [],
   "version": "0.1.0"
