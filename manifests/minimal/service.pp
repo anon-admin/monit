@@ -10,8 +10,7 @@ class monit::minimal::service (
   }
 
 
-  service { "monit":
-  }
+  service { "monit": }
 
   File["/etc/monit/monitrc"] -> Service[monit]
   File["/etc/monit/monitrc"] ~> Service[monit]

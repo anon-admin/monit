@@ -3,13 +3,13 @@ class monit::minimal::config (
 ) inherits monit::minimal::install {
 
 
-    file { ["/etc/monit/conf.d","/etc/monit/${rc_dir}","/etc/monit"]:
-      owner => root,
-      group => root,
-      mode => '555',
-      ensure => directory,
-      require => Package["monit"],
-    }
+  file { ["/etc/monit/conf.d","/etc/monit/${rc_dir}","/etc/monit"]:
+    owner => root,
+    group => root,
+    mode => '555',
+    ensure => directory,
+    require => Package["monit"],
+  }
 
   file { "/etc/monit/monitrc":
     owner   => root,
