@@ -1,5 +1,5 @@
 class monit::minimal::config (
-  $rc_dir = $monit::conf::rc_dir,
+  $rc_dir = $monit::param::rc_dir,
 ) inherits monit::minimal::install {
 
 

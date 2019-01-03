@@ -1,4 +1,4 @@
-class monit::conf (
+class monit::param (
 ) {
   $rc_dir  = $facts['os.distro.codename']? {
     'xenial' => 'monitrc.d',
