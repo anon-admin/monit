@@ -10,7 +10,7 @@ class monit::minimal::config (
   $has_to_make_available = $monit::param::has_to_make_available,
 ) inherits monit::minimal::install {
 
-  file { ["/etc/monit/conf.d","/etc/monit/${rc_dir}",'/etc/monit']:
+  file { '/etc/monit':
     owner   => root,
     group   => root,
     mode    => '0555',
@@ -24,7 +24,7 @@ class monit::minimal::config (
       group   => root,
       mode    => '0555',
       ensure  => directory,
-      require => Package['monit'],
+      require => [ Package['monit'], File['/etc/monit'] ],
     }
     File["/etc/monit/${enabled_dir}"] -> File['/etc/monit/monitrc']
   }
@@ -34,7 +34,7 @@ class monit::minimal::config (
     group   => root,
     mode    => '0555',
     ensure  => directory,
-    require => Package['monit'],
+    require => [ Package['monit'], File['/etc/monit'] ],
   }
   File["/etc/monit/${enabled_dir}"] -> File['/etc/monit/monitrc']
 
@@ -43,7 +43,7 @@ class monit::minimal::config (
     owner   => root,
     group   => root,
     mode    => '0400',
-    require => Package['monit'],
+    require => [ Package['monit'], File['/etc/monit'] ],
   }
 
   exec { "/usr/bin/find /etc/monit -name '*~' -delete":
