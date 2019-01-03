@@ -2,9 +2,11 @@
   "name": "ppmister-monit",
   "version": "0.1.0",
   "author": "ppmister",
-  "summary": "",
+  "summary": "This module help setup and manage monit service, containing minimal to be expandable.",
   "license": "GPL-3.0-or-later",
   "source": "https://github.com/anon-admin/monit",
+  "project_page": "https://github.com/anon-admin/monit",
+  "issues_url": "https://github.com/anon-admin/monit/issues",
   "dependencies": [
     {
       "name": "puppetlabs-stdlib",
